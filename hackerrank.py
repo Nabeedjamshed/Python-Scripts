@@ -1109,10 +1109,13 @@ from itertools import*
 # from itertools import permutations
 # l = list(map(int, input().split()))
 # perm = permutations(l)
-# l2 = []
+# l3 = []
+# l2 = set()
 # for i in perm:
-#     l2.append(list(i))
-# print(l2)
+#     l2.add(i)
+# for j in l2:
+#     l3.append(list(j))
+# print(l3)
 
 
 # from itertools import permutations
@@ -1156,28 +1159,909 @@ from itertools import*
 #             l.append(i)
 #             l.append(j)
 # print(l)
-import math as m
+# import math as m
 # class Solution:
-def divide(dividend: int, divisor: int) -> int:
-    if divisor < 0 and dividend < 0:
-        d = m.ceil(dividend/divisor)
-        if d < (2**31-1):
-            d = d
-        elif d > (2**31):
-            d = d-1
-    elif divisor < 0 :
-        d = m.ceil(dividend/divisor)
-        if d > (2**31-1):
-            d = d-1
-        elif d < (2**31):
-            d = d
-    else:
-        d = m.floor(dividend/divisor)
-        if d > (2**31-1):
-            d = d-1
-        elif d < (2**31):
-            d = d
-    return d
-dividend = int(input())
-divisor = int(input())
-print(divide(dividend,divisor))
+#     def divide(self, dividend: int, divisor: int) -> int:
+#         if divisor < 0 and dividend < 0:
+#             self.d = m.ceil(dividend/divisor)
+#             if self.d < (2**31-1):
+#                 self.d = self.d
+#             elif self.d > (2**31):
+#                 self.d = self.d-1
+#         elif divisor < 0 :
+#             self.d = m.ceil(dividend/divisor)
+#             if self.d > (2**31-1):
+#                 self.d = self.d-1
+#             elif self.d < (2**31):
+#                 self.d = self.d
+#         else:
+#             self.d = m.floor(dividend/divisor)
+#             if self.d > (2**31-1):
+#                 self.d = self.d-1
+#             elif self.d < (2**31):
+#                 self.d = self.d
+#         return self.d
+# dividend = int(input())
+# divisor = int(input())
+# print(divide(dividend,divisor))
+
+
+
+# import math as m
+# class Solution:
+#     def divide(self, dividend: int, divisor: int) -> int:
+#         if divisor < 0 and dividend < 0:
+#             self.d = m.ceil(dividend/divisor)
+#             if self.d > (2**31-1):
+#                 self.d = self.d-1
+#             elif self.d < (2**31):
+#                 self.d = self.d-1
+#         elif divisor < 0 :
+#             self.d = m.ceil(dividend/divisor)
+#             if self.d > (2**31-1):
+#                 self.d = self.d-1
+#             elif self.d < (2**31):
+#                 self.d = self.d
+#         else:
+#             self.d = m.floor(dividend/divisor)
+#             if self.d > (2**31-1):
+#                 self.d = self.d-1
+#             elif self.d < (2**31):
+#                 self.d = self.d
+#         return self.d
+
+# import math as m
+# x = float(input())
+# n = int(input())
+# ans = m.pow(x,n)
+# f = round(ans,5)
+# print(f)
+
+
+# import math as m
+# l1 = list(map(int, input().split()))
+# l2 = list(map(int, input().split()))
+# l = l1+l2
+# sorted_l = sorted(l)
+# if len(sorted_l) % 2 != 0:
+#     mid = (m.ceil(float(len(sorted_l) / 2)) - 1)
+#     ans = sorted_l[mid]
+# else:
+#     mid_l = int((len(sorted_l)) / 2)
+#     ans1 = sorted_l[mid_l]
+#     ans2 = sorted_l[(mid_l)-1]
+#     ans = (ans1 + ans2) / 2
+# print(ans)
+
+# l = []
+# s = input()
+# for i in range(len(s)):
+#     if s[i] not in l:
+#         l.append(s[i])
+# if s == " ":
+#     l.append(1)
+#     length = len(l) 
+# elif s == "":
+#     l = []
+#     length = len(l) 
+# else:
+#     length = len(l)        
+# print(length)
+
+# class Solution:
+#     def lengthOfLongestSubstring(self, s: str) -> int:
+#         self.l = []
+#         for i in range(len(s)):
+#             if s[i] not in self.l:
+#                 self.l.append(s[i])
+#         if s == " ":
+#             self.l.append(1)
+#             self.length = len(self.l) 
+#         elif s == "":
+#             self.l = []
+#             self.length = len(self.l) 
+#         else:
+#             self.length = len(self.l)        
+        
+#         return self.length
+
+
+# nums = list(map(int, input().split()))
+# target = int(input())
+# for i in nums:
+#     if target == i:
+#         ans = nums.index(target)
+# else:
+#     nums.append(target)
+#     sorted_l = sorted(nums)
+#     for i in sorted_l:
+#         if target == i:
+#             ans = sorted_l.index(target)
+# print(ans)
+
+# l = []
+# nums = []
+# n = int(input("Enter total numbers in array: "))
+# for i in range(n):
+#     num = int(input("Enter the value of array: "))
+#     nums.append(num)
+# for i in nums:
+#     if i not in l:
+#         l.append(i)
+# print(l)
+
+# haystack = input()
+# needle = input()
+# if needle in haystack:
+#     index = haystack.index(needle)
+# else:
+#     index = -1
+# print(index)
+
+# l = []
+# nums = list(map(int, input().split()))
+# target = int(input())
+# for i in nums:
+#     if target in nums:
+#         l.append(i)
+# print(l)
+
+# l = []
+# nums = list(map(int, input().split()))
+# target = int(input())
+# for i in range(len(nums)):
+#     if target == nums[i]:
+#         l.append(i)
+# if len(l) == 1:
+#     l.append(0)
+# if target not in nums:
+#     l.append(-1)
+#     l.append(-1)
+# print(l)
+
+# l1 = list(map(int, input().split()))
+# m = int(input())
+# l2 = list(map(int, input().split()))
+# n = int(input())
+# three_element = l1[0:m:1]
+# for i in three_element:
+#     l2.append(i)
+# ans = sorted(l2)
+# print(ans)
+
+# l1 = list(map(int, input().split()))
+# m = int(input())
+# l2 = list(map(int, input().split()))
+# n = int(input())
+# l1= l1[0:m:1]
+# for i in l2:
+#     l1.append(i)
+# l1 = sorted(l1)
+# print(l1)
+
+# l = []
+# l1 = list(map(str, input().split()))
+# l2 = list(map(str, input().split()))
+# l3 = list(map(str, input().split()))
+# l.append(l1)
+# l.append(l2)
+# l.append(l3)
+# word = input()
+# for i in word:
+#     for j in i:
+
+#         print('true')
+#         break
+#     if i in l2:
+#         print('true')
+#         break
+#     if i in l3:
+#         print('true')
+#         break
+#     else:
+#         print('false')
+
+# from itertools import combinations
+# l = []
+# k = int(input())
+# n = int(input())
+# for i in range(1,n+1):
+#     l.append(i)
+# l1 = []
+# ans = list(combinations(l,k))
+# # for j in ans:
+# #     if sum(j) == n:
+# #         l1.append(list(j))
+# print(l1)
+
+# l1 = []
+# l = list(map(int, input().split()))
+# i,j = 0,1
+# while i<=len(l):
+#     if l[i] != l[j]:
+#         # l.remove(l[i])
+#         # l.remove(l[j])
+#         j += 1
+#     l1.append(l[i])
+#     i+=1
+#     j+=1
+# else:
+    
+#     i += 1
+#     j+=1
+# print(l)
+# # print(l1)
+
+# l = list(map(int, input().split()))
+# n = len(l)
+# for i in range(n+1):
+#     if i not in l:
+#         a = i
+# print(a)
+
+# import inflect
+# start = inflect.engine()
+
+# num = int(input())
+
+# number_to_word = start.number_to_words(num)
+# print(number_to_word)
+
+# class Solution:
+#     def addDigits(self, num: int) -> int:
+#         if num < 10:
+#             return num
+#         else:
+#             self.l = []
+#             self.nums = str(num)
+#             for i in self.nums:
+#                 self.l.append(int(i))
+#             self.sum_l = sum(self.l)
+#             return self.addDigits(self.sum_l)
+        
+# import math as m
+# n = int(input())
+# if n == 1:
+#     print('true')
+# else:
+#     sq = m.sqrt(n)
+#     power = (2**sq)
+#     print(power)
+#     new = m.ceil(power)
+#     if new == n:
+#         print('true')
+#     else:
+#         print('false')
+
+# n = int(input())
+# sum = 1
+# while sum < n:
+#     sum = sum * 3
+# if sum == n:
+#     print('true')
+# else:
+#     print('false')
+
+
+# l = list(map(int, input().split()))
+# l1 = set()
+# for i in l:
+#     l1.add(i)
+# if len(l) != len(l1):
+#     print('true')
+# else:
+#     print('false')
+
+
+# s = input().split()
+# new = list(s[::-1])
+# new_s = " ".join(new)
+# print(type(new_s))
+
+# version1 = input()
+# version2 = input()
+# version3 = float(version1.rstrip(str).rstrip(str))
+# version4 = float(version2.rstrip(str).rstrip(str))
+# version5 = int(version3)
+# version6 = int(version4)
+
+# if version5 < version6:
+#     print(-1)
+# elif version5 > version6:
+#     print(1)
+# else:
+#     print(0)
+
+
+# nums = list(map(int, input().split()))
+# k = int(input())
+# new = nums[-1:(-k-1):-1]
+# sorted_new = sorted(new)
+# for i in sorted_new:
+#     nums.remove(i)
+# ans = sorted_new + nums
+# print(ans)
+
+# l = []
+# s1 = set()
+# s2 = set()
+# num1 = list(map(int, input().split()))
+# num2 = list(map(int, input().split()))
+# for i in num1:
+#     s1.add(i)
+# for j in num2:
+#     s2.add(j)
+# ans = s1.intersection(s2)
+# for k in ans:
+#     l.append(k)
+# print(l)
+
+# s = set()
+# num1 = list(map(int, input().split()))
+# num2 = list(map(int, input().split()))
+# k = int(input())
+# for i in num1:
+#     num2.append(i)
+# new = sorted(num2,reverse=True)
+
+# for j in new:
+#     s.add(j)
+# s1 = sorted(s,reverse=True)
+# ans = s1[:k:1]
+# print(ans)
+
+# l = []
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     if nums.count(i) >= 2:
+#         l.append(i)
+
+# for j in l:
+#     a = j
+# print(a)
+
+
+    # n = int(input())
+    # fact = 1
+    # for i in range(1,n+1):
+    #     fact = fact*i
+
+    # digits = []
+    # new = digits
+    # while fact > 0:
+    #     digit = fact % 10  
+    #     digits.insert(0, digit)  
+    #     fact //= 10  
+
+    # print(new)
+    # if 0 in digits:
+    #     digits.remove(0)
+    # print(digits)
+    # if len(new) > len(digits):
+    #     print(0)
+
+
+# n = int(input())
+# fact = 1
+# for i in range(1, n + 1):
+#     fact = fact * i
+
+# digits = []
+# while fact > 0:
+#     digit = fact % 10  
+#     digits.insert(0, digit)  
+#     fact //= 10  
+# new = digits.copy()
+# while digits[-1] == 0:
+#     digits.pop()
+# l = []
+# for j in range(len(new) - len(digits)):
+#     l.append(0)
+
+# print(l.count(0))
+
+
+# import re
+# s = input()
+# new_s = re.sub(r"[^\w]", "",s)
+# print(new_s)
+# new_lower = new_s.lower()
+# reverse_new_lower = new_lower[::-1]
+
+# if new_lower == reverse_new_lower:
+#     print('true')
+# else:
+#     print('false')
+
+
+
+# def twoSum(numbers: list[int], target: int):
+#     l = []
+#     for i in range(len(numbers)):
+#         for j in range(i+1,len(numbers)):
+#             if numbers[i]+numbers[j] == target:
+#                 l.append(i)
+#                 l.append(j)
+#     l1 = []
+#     for k in l:   
+#         sums = k+1
+#         l1.append(sums)
+#     return l1
+# nums = list(map(int, input().split()))
+# tar = int(input())
+# a = twoSum(nums,tar)
+# print(a)
+
+# l = []
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     a = nums.count(i)
+#     if a > (len(nums) / 3) and i not in l:
+#         l.append(i)
+# print(l)
+
+
+# l = []
+# n = int(input())
+# for i in range(n+1):
+#     l.append(i)
+# digits = []
+# for j in l:
+#     while j > 9:
+#         digit = j % 10  
+#         digits.insert(0, digit)  
+#         j //= 10  
+# print(l)
+# print(digits)
+
+# l = []
+# s = set()
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     if nums.count(i) > 1:
+#         l.append(i)
+# for j in l:
+#     s.add(j)
+# for k in s:
+#     a = k
+# print(a)
+
+# l = []
+# number = int(input())
+# binary_number = hex(number)[2:]
+# print(binary_number)
+# for i in binary_number:
+#     if i == '1':
+#         l.append('0')
+#     else:
+#         l.append('1')
+# a = "".join(l)
+# ans = int(a,2)
+# print(ans)
+
+# l = []
+# nums = list(map(int, input().split()))
+# for i in range(1,len(nums)+1):
+#     if i not in nums:
+#         l.append(i)
+# print(l)
+
+# l = []
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     if nums.count(i) > 1 and i not in l:
+#         l.append(i)
+# ans = sorted(l)
+# print(ans)
+
+
+# def thirdMax(nums: list[int]):
+#     s =set()
+#     for i in nums:
+#         s.add(i)
+#     if len(s) < 3:
+#         new = max(s)
+#         return new
+#     else:
+#         l = list(s)
+#         ans = sorted(l)
+#         new = ans[-3]
+#         return new
+# nums = list(map(int, input().split()))
+# a = thirdMax(nums)
+# print(a)
+
+# l = []
+# a = int(input())
+# b = list(map(int, input().split()))
+# for i in b:
+#     l.append(str(i))
+# c = "".join(l)
+# integer_c = int(c)
+# new = pow(a,integer_c) % 1337
+# print(new)
+
+
+# def fib(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fib(n-2)+fib(n-1)
+
+
+# s = input()
+# if s == s.upper():
+#     print('true')
+# else:
+#     print('false')
+
+# l = []
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     if nums.count(i) < 2:
+#         l.append(i)
+# for j in l:
+#     a = j
+# print(a)
+
+# l = []
+# s = input().split()
+# for i in s:
+#     l.append(i)
+# reversed_string = []
+# for j in l:
+#     new = j[::-1]
+#     reversed_string.append(new)
+# ans = " ".join(reversed_string)
+# print(ans)
+
+# lower = []
+# upper = []
+# s = input()
+# for i in s:
+#     if i == i.lower():
+#         lower.append(i)
+#     else:
+#         a = i.lower()
+#         upper.append(a)
+
+# for i in lower:
+#     if i != 'c':
+#         print(0)
+# for j in upper:
+#     if j != 'c':
+#         print(0)
+# else:
+#     new_upper = set(upper)
+#     c = 0
+#     for j in new_upper:
+#         if j in lower: 
+#             c += 1
+# print(c)
+
+# l = []
+# s = input()
+# for i in s:
+#     a = ord(i)
+#     l.append(a)
+# new = []
+# for j in range(len(l)-1):
+#     ans = l[j] - l[j+1]
+#     answer = abs(ans)
+#     new.append(answer)
+# x = sum(new)
+# print(x)
+
+# s = input()
+# s1 = s.lower()
+# count = 0
+# for i in range(len(s)-1):
+#     if s1[i] != s1[i+1]:
+#         count += 1
+# print(count)
+
+
+# s = input()
+# s1 = s.count(s[0])
+# for i in range(len(s)-1):
+#     if s[i] == s[i+1]:
+#         print(-1)
+# else:
+#     if s1 == 1:
+#         print(0)
+#     else:
+#         print(s1)
+
+# l = []
+# x = int(input())
+# string_x = str(x)
+# for i in string_x:
+#     l.append(int(i))
+# divider = sum(l)
+# if x % divider == 0:
+#     print(divider)
+# else:
+#     print(-1)
+
+
+# l = []
+# nums = list(map(int, input().split()))
+# if len(nums) <= 10000 and len(nums) >= 3:
+#     for j in nums:
+#         l.append(abs(j))
+#     sorted_nums = sorted(l)
+#     new_nums = sorted_nums[-3:]
+#     mult = 1
+#     for i in new_nums:
+#         mult = mult * i
+# elif len(nums) <= 10000 and len(nums) >= 3:
+
+# l = []
+# word1 = input()
+# word2 = input()
+# if word1 == word2:
+#     print(0)
+# else:
+#     for i in word1:
+#         for j in word2:
+#             if i == j:
+#                 l.append(i)
+#     s = set()
+#     for i in l:
+#         s.add(i)
+#     print(len(s))
+
+
+# nums = list(map(int, input().split()))
+# s = set()
+# for i in nums:
+#     s.add(i)
+# l = []
+# l1 = []
+# for j in s:
+#     l.append(j)
+#     l1.append(j)
+# if len(nums) > len(l):
+#     l.append('_')
+# print(len(l1))
+# print(l)
+
+# from itertools import*
+# l = set()
+# s = []
+# word = input()
+# for i in word:
+#     s.append(i)
+# ans = list(chain.from_iterable(combinations(s, r) for r in range(len(s) + 1)))
+# for i in ans:
+#     l.add(i)
+# l1 = []
+# for j in l:
+#     l1.append(list(j))
+# print(l1)
+
+# nums = list(map(int, input().split()))
+# indexDiff = int(input())
+# valueDiff = int(input())
+# if valueDiff != indexDiff:
+#     if abs(valueDiff - indexDiff) <= indexDiff:
+#         if abs(nums[valueDiff] - nums[indexDiff]) <= valueDiff:
+#             print('true')
+#         else:
+#             print('false')
+#     else:
+#         print('false')
+# else:
+#     print('false')
+
+# answer = []
+# n = int(input())
+# for i in range(1,n+1):
+#     if (i % 3 == 0) and (i % 5 == 0):
+#         answer.insert(i,"FizzBuzz")
+#     elif (i % 3) == 0:
+#         answer.insert(i,"Fizz")
+#     elif (i % 5) == 0:
+#         answer.insert(i,"Buzz")
+#     else:
+#         answer.insert(i,str(i))
+# print(answer)
+
+# s = set()
+# word = input()
+# ch = input()
+# if ch not in word:
+#     print(word)
+# else:
+#     for i in word:
+#         if i == ch:
+#             s.add(word.index(i))
+#     number = s.pop()
+#     new = word[0:(number+1):1]
+#     new_word1 = new[::-1]
+#     new_word2 = word[(number+1)::1]
+#     ans = new_word1+new_word2
+#     print(ans)
+
+# s=set()
+# num1 = list(map(int, input().split()))
+# num2 = list(map(int, input().split()))
+# sorted_num1 = sorted(num1)
+# sorted_num2 = sorted(num2)
+# for i in range(len(num1)):
+#     num = sorted_num2[i] - sorted_num1[i]
+#     s.add(num)
+# s1 = s.pop()
+# print(s1)
+
+# arr = []
+# num = list(map(int, input().split()))
+# if len(num) == 2:
+#     ans = sorted(num,reverse=True)
+#     print(ans)
+# else:
+#     new_num = sorted(num)
+#     mid = len(new_num) // 2
+#     left = new_num[:mid]
+#     right = new_num[mid:]
+#     sorted_left = sorted(left,reverse=True)
+#     sorted_right = sorted(right,reverse=True)
+#     ans = sorted_left+sorted_right
+#     print(ans)
+# print(left)
+# print(right)
+# for i in range(len(num)//2):
+#     l.append(new_num[i])
+# for i in range(len(num)//2):
+
+# l = []
+# s = input().split()
+# k = int(input())
+# for i in range(k):
+#     a = s[i]
+#     l.append(a)
+# new = " ".join(l)
+# print(new)
+
+# nums = list(map(int, input().split()))
+# a = list(map(lambda x:x*x,nums))
+# new = sorted(a)
+# print(new)
+
+# even = []
+# odd = []
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     if i % 2 == 0:
+#         even.append(i)
+#     else:
+#         odd.append(i)
+# ans_even = sorted(even)
+# ans_odd = sorted(odd,reverse=True)
+# ans = ans_even+ans_odd
+# print(ans)
+
+# l = []
+# for i in range(6):
+#     lst = list(map(int, input().split()))
+#     l.append(lst)
+# count = 0
+# for j in range(len(l)-1):
+#     if (sum(l[j])+2) == sum(l[j+1]):
+#         count += 1
+# if count == len(l)-1:
+#     print('true')
+# else:
+#     print('false')
+
+# l = []
+# nums = list(map(int, input().split()))
+# for i in nums:
+#     a = len(str(i))
+#     l.append(int(a))
+# count = 0
+# for i in l:
+#     if i % 2 == 0:
+#         count+=1
+# print(count)
+
+# l = []
+# for i in range(6):
+#     lst = list(map(int, input().split()))
+#     l.append(lst)
+# l1 = sorted(l)
+# l3 = []
+# for i in l1:
+#     l3.append(i[0])
+# l4 = []
+# for i in range(len(l3)-1):
+#     a = l3[i+1] - l3[i]
+#     l4.append(a)
+# ans = max(l4)
+# print(ans)
+
+# words = list(map(str, input().split()))
+# x = input()
+# l = set()
+# for i in words:
+#     for j in i:
+#         if j == x:
+#             l.add(words.index(i))
+# ans = list(l)
+# print(ans)
+
+# word1 = list(map(str, input().split()))
+# word2 = list(map(str, input().split()))
+# l1  = "".join(word1)
+# l2  = "".join(word2)
+# if l1 == l2:
+#     print('true')
+# else:
+#     print('false')
+
+
+# text = input().split()
+# print(text)
+# brokenLetters = input()
+# l = set()
+# for j in brokenLetters:
+#       pass
+# for i in text:
+#     if j not in i:
+#         l.add(i)
+
+# new = len(l)
+# print(new)
+
+
+# nums = list(map(int, input().split()))
+# k = int(input())
+# new_nums = sorted(nums)
+# count = 0
+# for i in new_nums:
+#     if i<k:
+#         nums.remove(i)
+#         count += 1
+# print(count)
+            
+# dictionary = list(map(str, input().split()))
+# sentence = input()
+# new_sentence = sentence.split()
+# for i in range(len(new_sentence)):
+#     for j in dictionary:
+#         if new_sentence[i][0] == j[0]:
+#             new_sentence[i] = j
+#             break
+# new_sentence = " ".join(new_sentence)
+# print(new_sentence)
+
+# nums1 = list(map(int, input().split()))
+# nums2 = list(map(int, input().split()))
+# k = int(input())
+# nums3 = nums1+nums2
+# sorted_nums3 = sorted(nums3)
+# l = []
+# for i in range(k):
+#     a = sorted_nums3.pop()
+#     l.append(a)
+# print(l)
+
+# count = False
+# arr = list(map(int, input().split()))
+# for i in range(len(arr)-2):
+#     if arr[i]%2 != 0 and arr[i+1]%2 != 0 and arr[i+2]%2 != 0:
+#         count = True
+# if count == True:
+#     print('true')
+# else:
+#     print('false')
+
+l = set()
+arr = list(map(int, input().split()))
+for i in arr:
+    if arr.count(i) > 1:
+        l.add(i)
+l1 = l.pop()
+print(l1)

@@ -230,7 +230,7 @@
 #         print(i*'*',end=' ')
 #     else:
 #         print((20-i)*'*',end=' ')
-
+#     print()
 # lst = [50,12,4,90,41,22,3,34,56,331,454,32,45]
 # n = len(lst)
 # for i in range(0,n-1):
@@ -323,7 +323,7 @@
 # print(type(z))
 # print(z)
 
-dic = {'name':['Nabeed',0,5,1],'age':19,'Occupation':'Software Engineer','Office':'NJ SE House'}
+# dic = {'name':['Nabeed',0,5,1],'age':19,'Occupation':'Software Engineer','Office':'NJ SE House'}
 # print(dic.get('name'))
 # for i in dic.keys():
 #     print(i)
@@ -604,9 +604,12 @@ dic = {'name':['Nabeed',0,5,1],'age':19,'Occupation':'Software Engineer','Office
 # import random as rd
 # ran_num = rd.randrange(1,10,1)
 # rows = 4
-
 # for i in range(10,0,-1):
-#     print(' '*(10-i) + i*'*')
+#     print(i*" *"+" "*(10-i))
+# for i in range(0, 6):
+#     print(' ' * (5 - i) + '* ' * (i+2))
+# for i in range(4,0,-1):
+#     print(' '*(4-i) + (i+2)*' *')
 
 # for i in range(1,10):
 #     for j in range(1,i+1,1):
@@ -705,10 +708,19 @@ dic = {'name':['Nabeed',0,5,1],'age':19,'Occupation':'Software Engineer','Office
 #         break
 # else:
 #     print(0)  
-def box():
-    try:
-        return 1
-    finally:
-        return 2
-k = box()
-print(k) 
+
+
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x = str(x)
+        y = x[::-1]
+        if x == y:
+            print("true")
+        else:
+            print("false")
+
+x = int(input())
+sol = Solution()
+y = sol.isPalindrome(x)
+   

@@ -2198,7 +2198,6 @@
 # print(c)
 
 
-
 # arr = [5]
 # k = int(input())
 # subarrays = []
@@ -2214,3 +2213,829 @@
 #     l1.append(x)
 # result = len(l1)
 # print(result)
+
+
+# seats = list(map(int, input().split()))
+# students = list(map(int, input().split()))
+# sorted_seats = sorted(seats)
+# sorted_students = sorted(students)
+# l = []
+# for i in range(len(seats)):
+#     l.append(abs(sorted_seats[i] - sorted_students[i]))
+# print(l)
+# print(sum(l))
+
+# def silding_window(s,p):
+#     check = []
+#     maximum = s[:len(p)]
+#     total = maximum
+#     sorted_max = sorted(maximum)
+#     for i in range(len(s)-len(p)):
+#         if sorted_max == p:
+#             check.append(sorted_max[0])
+#         else:
+#             total -= s[i]
+#             total += s[i+len(p)]
+#     return check
+# s = "cbaebabacd"
+# p = "abc"
+# a = silding_window(s,p)
+# print(a)
+
+
+# def sliding_window(s, p):
+#     check = []
+#     p_sorted = sorted(p)
+#     window_length = len(p)
+    
+#     for i in range(len(s) - window_length + 1):
+#         window = s[i:i + window_length]
+#         if sorted(window) == p_sorted:
+#             check.append(i)
+    
+#     return check
+
+# s = "abab" 
+# p = "ab"    
+# a = sliding_window(s, p)
+# print(a)
+
+
+# cardPoints = [9,7,7,9,7,7,9] 
+# k = 7
+# first = cardPoints[:k]
+# last = cardPoints[-1:-k-1:-1]
+# first_sum = sum(first)
+# last_sum = sum(last)
+# if first_sum>last_sum:
+#     print(first_sum)
+# else:
+#     print(last_sum)
+
+# def sliding_window(cardPoints, k):
+#     super_total = sum(cardPoints)
+#     total = sum(cardPoints[:k])
+#     min_total = total
+#     for i in range(len(cardPoints) - k):
+#         total -= cardPoints[i]
+#         total += cardPoints[i+k]
+#         min_total = min(min_total,total)
+#     result = super_total-min_total
+#     return result
+# cardPoints = [100,40,17,9,73,75] 
+# k = 3
+# a = sliding_window(cardPoints,k)
+# print(a)
+
+
+
+# t = input()
+# s = sorted(set(t))
+# subarray = []
+# n = len(t)
+# for i in range(1,1 << n):
+#     sub = ""
+#     for j in range(n):
+#         if i & (1 << j) != 0:
+#             sub += t[j]
+#     subarray.append(sorted(sub))
+# new = "".join(s)
+# l = []
+# for j in subarray:
+#     a = "".join(j)
+#     l.append(a)
+# l1 = []
+# for k in l:
+#     if new in k:
+#         l1.append(k)
+
+# print(l1)
+# l = []
+# for i in subarray:
+#     if new in i:
+#         l.append(i)
+# print(l)
+# newl = set(l)
+# print(len(newl))
+
+
+# nums = list(map(int, input().split()))
+# k = int(input())
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         a = abs(nums[i]-nums[j])
+#         l.append(a)
+# l.sort()
+# result = l[k-1]
+# print(result)
+
+# nums = list(map(int, input().split()))
+# maxi = max(nums)
+# l = []
+# for i in range(1,maxi+2):
+#     l.append(i)
+# s = set(nums)
+# l1 = []
+# for j in l:
+#     if j not in s:
+#         l1.append(j)
+# print(len(l1))
+
+
+# nums = list(map(int, input().split()))
+# sorted_nums = sorted(nums)
+# counts = 0
+# l = []
+# for i in sorted_nums:
+#     if i not in l:
+#         l.append(i)
+#     else:
+#         i +=1
+#         if i not in l:
+#             l.append(i)
+#         else:
+#             i += 1
+#             l.append(i)
+#         counts+=1
+# print(sorted_nums)
+# print(l)
+# new = []
+# for j in range(len(l)):
+#     a = abs(sorted_nums[j] - l[j])
+#     new.append(a)
+# print(sum(new))
+
+
+# nums = list(map(int, input().split()))
+# sorted_nums = sorted(nums)
+# counts = 0
+# l = []
+# for i in sorted_nums:
+#     while i in l:
+#         i += 1
+#     l.append(i)
+
+# new = []
+# for j in range(len(l)):
+#     a = abs(sorted_nums[j] - l[j])
+#     new.append(a)
+# print(sum(new))
+
+
+
+# class Solution:
+#     def minIncrementForUnique(self, nums: List[int]) -> int:
+#         nums.sort()
+#         moves = 0
+#         for i in range(1, len(nums)):
+#             if nums[i] <= nums[i - 1]:
+#                 increment = nums[i - 1] - nums[i] + 1
+#                 nums[i] += increment
+#                 moves += increment
+#         return moves
+
+# nums = list(map(int, input().split()))
+# k = int(input())
+# subarray = []
+# n = len(nums)
+# for i in range(1,1 << n):
+#     sub = []
+#     for j in range(n):
+#         if i & (1 << j) != 0:
+#             su    b.append(nums[j])
+#     subarray.append(sorted(sub))
+# newsubarray = []
+# for i in subarray:
+#     if len(i) > k:
+#         newsubarray.append(i)
+# l = []
+# print(newsubarray)
+# for i in newsubarray:
+#     odd_count = sum(1 for num in i if num % 2 != 0)
+#     l.append(odd_count)
+
+# print(l)
+
+
+# w = 0 
+# profits = [1,2,3]
+# capital = [0,1,2]
+# for i in range(len(capital)):
+#     if capital[i] == w:
+#         w += profits[i]
+# print(w)
+
+
+# nums = [1,2,3,4,3]
+# l = []
+# for i in nums:
+#     if i+1 not in nums:
+#         l.append(-1)
+#     else:
+#         l.append(i+1)
+# print(l)
+
+# nums = list(map(int, input().split()))
+# k = int(input())
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i+1, len(nums)):
+#         a = abs(nums[i] - nums[j])
+#         if a == k:
+#             l.append(a)
+# print(len(l))
+
+
+# words = ["def","ghi"]
+# newwords = []
+# for i in words:
+#     newwords.append(i[::-1])
+# l = ""
+# for j in range(len(words)):
+#     if words[j] == newwords[j]:
+#         l += newwords[j]
+#         break
+# print(l)
+
+# arr = [0,0]
+# check = 0
+# for i in arr:
+#     i = i*2
+#     if i in arr:
+#         check +=1
+#         break
+# if check == 1:
+#     print(True)
+# else:
+#     print(False)
+
+
+# nums = list(map(int, input().split()))
+# goal = int(input())
+# subarray = []
+# for i in range(len(nums)):
+#     for j in range(i,len(nums)):
+#         subarray.append(sum(nums[i:j+1]))
+# check = 0
+# for k in subarray:
+#     if k == goals:
+#         check += 1
+# print(check)
+# subarrays = []
+# for i in range(len(nums)):
+#     subarrays += [sum(nums[i:j]) for j in range(i+1, len(nums)+1)]
+# check = 0
+# for k in subarrays:
+#     if k == goal:
+#         check += 1
+# print(check)
+
+
+# distance = list(map(int, input().split()))
+# new_distance = [None] + distance
+# start = int(input())
+# destination = int(input())
+# first = new_distance[1:destination+1]
+# sum_first = sum(first)
+# for i in first:
+#     distance.remove(i)
+# second = sum(distance)
+
+# if sum_first<second:
+#     print(sum_first)
+# else:
+#     print(second)
+
+# nums = list(map(int, input().split()))
+# n = int(input())
+# l = []
+# for i in range(1,n+1):
+#     l.append(i)
+# subarray = []
+# counts = 0
+# while len(l) != len(subarray):
+#     for k in range(len(nums)):
+#         for j in range(k,len(nums)):
+#             subarray.append(sum(nums[k:j+1]))
+#     subarray.sort()
+#     for x in range(1,n+1):
+#         if l != subarray:
+#             if x not in nums:
+#                 nums.append(x)
+#                 break
+#     counts += 1
+# print(counts)
+
+
+# nums = list(map(int, input().split()))
+# n = int(input())
+
+# patches = 0
+# reach = 0
+# i = 0
+
+# while reach < n:
+#     if i < len(nums) and nums[i] <= reach + 1:
+#         reach += nums[i]
+#         i += 1
+#     else:
+#         reach += reach + 1
+#         patches += 1
+
+# print(patches)
+
+# import math as m
+# c = int(input())
+# sq = int(m.sqrt(c))
+# check = 0
+# l = []
+# for i in range(sq+1):
+#     l.append(i)
+# for i in range(len(l)):
+#     for j in range(i+1,len(l)):
+#         if (l[i] ** 2) + (l[j] ** 2) == c:
+#             check += 1
+#             break
+
+# if check == 1:
+#     print(True)
+# else:
+#     print(False)
+
+# for i in range(sq+1):
+#     a_sq = (i ** 2)
+#     b_sq = c - a_sq
+#     b_sqrt = m.sqrt(b_sq)
+#     if b_sqrt.is_integer():
+#         check += 1
+#         break
+
+# if check == 1:
+#     print(True)
+# else:
+#     print(False)
+
+# nums = [1,2,3,4,5]
+# d = {}
+# for i in range(len(nums)):
+#     a = nums.count(nums[i])
+#     d[nums[i]] = a
+# l = []
+# for x,y in d.items():
+#     if y<2:
+#         l.append(x)
+# print(sum(l))
+
+# nums = [2,2,1,1,1,2,2]
+# d = {}
+# for i in nums:
+#     if i in d:
+#         d[i] += 1
+#     else:
+#         d[i] = 1
+# maximum = max(d.values())
+# for x,y in d.items():
+#     if y == maximum:
+#         print(x)
+
+
+# nums = [1,1,1,2,2,3]
+# k = int(input())
+# for i in range(k):
+
+
+# nums = [1]
+# d = {}
+# for i in nums:
+#     if i in d:
+#         d[i] += 1
+#     else:
+#         d[i] = 1
+# l = []
+# for j in range(k):
+#     maxi = max(d.values())
+#     for x,y in d.items():
+#         if y == maxi:
+#             l.append(x)
+#     d = {k: v for k, v in d.items() if v != maxi}
+# print(l)
+
+
+# nums = [23,2,6,4,7]
+# k = 13
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         a = nums[i:j+1]
+#         if len(a) == 2:
+#             l.append(a)
+# check = 0
+# for j in l:
+#     add = sum(j)
+#     if add % k == 0:
+#         check += 1
+#         break
+# if check == 1:
+#     print(True)
+# else:
+#     print(False)
+
+
+# nums = [1,2,3,3,2,1]
+# d = {}
+# for i in nums:
+#     if i in d:
+#         d[i] += 1
+#     else:
+#         d[i] = 1
+# l = []
+# for x,y in d.items():
+#     if y > 1:
+#         l.append(x)
+# if not l:
+#     print(0)
+# elif len(l) == 1:
+#     print(l[0])
+# else:
+#     check = l[0]
+#     for i in range(1,len(l)):
+#         check = check ^ l[i] 
+#     print(check)
+
+
+# difficulty = [2,4,6,8,10]
+# profit = [10,20,30,40,50]
+# worker = [4,5,6,7]
+# d = {}
+# sorted_worker = sorted(worker)
+# for i in range(len(worker)):
+#     if worker[i] in difficulty:
+#         a = difficulty.index(worker[i])
+#         d[worker[i]] = a
+#     else:
+#         a = difficulty.index(worker[i-1])
+#         d[worker[i]] = a
+
+# print(d)
+# difficulty = [2,4,6,8,10]
+# profit = [10,20,30,40,50]
+# worker = [4,5,6,7]
+# l = []
+# jobs = dict(zip(difficulty, profit))
+# for x,y in jobs.items():
+#     if x in worker:
+#         l.append(y)
+#     else:
+#         for i in range(len(worker)):
+#             if x-i in jobs.keys():
+#                 l.append(y)
+
+# print(l)
+
+# difficulty = [66,1,28,73,53,35,45,60,100,44,59,94,27,88,7,18,83,18,72,63]
+# profit = [66,20,84,81,56,40,37,82,53,45,43,96,67,27,12,54,98,19,47,77]
+# worker = [61,33,68,38,63,45,1,10,53,23,66,70,14,51,94,18,28,78,100,16]
+# l = []
+# d = dict(zip(difficulty, profit))
+# for i in worker:
+#     max_profit = 0
+#     for x, y in d.items():
+#         if x <= i and y > max_profit:
+#             max_profit = y
+#     l.append(max_profit)
+# print(sum(l))
+
+# difficulty = [85,47,57]
+# profit = [24,66,99]
+# worker = [40,25,25]
+# d = dict(zip(difficulty, profit))
+# l = []
+# for i in range(len(worker)):
+#     if worker[i] in d:
+#         l.append(d[worker[i]])
+#     else:
+#         worker[i] = worker[i-1]
+#         l.append(d[worker[i]])
+# print(sum(l))
+
+
+# def maxProfitAssignmentSimple(difficulty, profit, worker):
+#   d = list(zip(difficulty, profit))
+#   d.sort(key=lambda x: x[1], reverse=True)
+#   max_profit = 0
+#   for i in worker:
+#     for x, y in d:
+#       if x <= i:
+#         max_profit += y
+#         break  
+#   return max_profit
+
+
+# bloomDay = list(map(int, input().split()))
+# m = int(input())
+# k = int(input())
+
+# # if (m * k) > len(bloomDay):
+# #     print(-1)
+# # else:
+# #     l = []
+# #     for i in range(m):
+# #         for j in range(k):
+# #             l.append(bloomDay[i * k + j])
+
+# #     print(max(l))
+
+
+# g = list(map(int,input().split()))
+# s = list(map(int,input().split()))
+# # s_set = set(s)
+# counts = 0
+# # for i in s_set:
+# #     if i in g:
+# #         counts +=1
+# # print(counts)
+# for i in g:
+#     for j in s:
+#         if s[i] >= g[j]:
+#             counts+=1
+# print(counts)
+
+
+
+# nums = [1,1]
+# s1 = set(sorted(nums))
+# n = len(nums)
+# s2 = set()
+# for i in range(1,n+1):
+#     s2.add(i)
+# new = list(s1 ^ s2)
+# print(new)
+
+# nums = [14,70,53,83,49,91,36,80,92,51,66,70]
+# maxi = 0
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         add = nums[i] ^ nums[j]
+#         if add > maxi:
+#             maxi = add
+# print(maxi)
+
+
+# arr = [1,2,3]
+# l = []
+# for i in arr:
+#     if len(l) > len(arr):
+#         break
+#     else:  
+#         if i == 0:
+#             l.append(0)
+#             l.append(0)
+#         else:
+#             l.append(i)
+# print(l)
+
+# arr = [10,11,12]
+# l = []
+# for i in range(len(arr)):
+#     for j in range(i,len(arr)):
+#         a = arr[i:j+1]
+#         if len(a) % 2 != 0:
+#             l.append(sum(a))
+# print(sum(l))
+
+# mat = [[1,2,3],
+#        [4,5,6],
+#        [7,8,9]]
+# l = []
+# for i in range(len(mat)):
+#     for j in range(len(mat)):
+#         if i == j:
+#             l.append(mat[i][j])
+#         elif i == len(mat)-j-1:
+#             l.append(mat[i][j])
+# print(sum(l))
+
+# def mult(arr):
+#     mul = 1
+#     for i in arr:
+#         mul = mul * i
+#     return mul
+# nums = list(map(int,input().split()))
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i,len(nums)):
+#         l.append(nums[i:j+1])
+# l1 = []
+# for k in l:
+#     m = mult(k)
+#     if m > 0:
+#         l1.append(len(k))
+# print(max(l1))
+
+
+# arr = [2,3,4,7,11]
+# k =int(input())
+# s1 = set(arr)
+# s2 = set()
+# for i in range(1,100):
+#     s2.add(i)
+# s3 = list(s2-s1)
+# new = s3[k-1]
+# print(new)
+
+# import math as m
+# nums = [[1,2,3],[5,17,7],[9,11,10]]
+# l = []
+# for i in range(len(nums)):
+#     for j in range(len(nums)):
+#         if i == j or i == len(nums) - j - 1:
+#             l.append(nums[i][j])
+# l1 = []
+# for number in l:
+#     if number <= 1:
+#         continue
+#     is_prime = True
+#     for j in range(2, int(m.sqrt(number)) + 1):
+#         if number % j == 0:
+#             is_prime = False
+#             break
+#     if is_prime:
+#         l1.append(number)
+# if l1:
+#     return max(l1)
+# else:
+#     return 0
+
+
+import math as m
+# n = int(input())
+# l = []
+# for number in range(n):
+#     if number <= 1:
+#         continue
+#     is_prime = True
+#     for j in range(2, int(m.sqrt(number)) + 1):
+#         if number % j == 0:
+#             is_prime = False
+#             break
+#     if is_prime:
+#         l.append(number)
+# if l:
+#     print(len(l))
+# else:
+#     print(0)
+
+
+# import math
+# n = int(input())
+# l1 = 0
+# for num in range(n):
+#     if num <= 1:
+#         continue 
+#     if num == 2:
+#         l1 += 1
+#         continue 
+#     if num % 2 == 0:
+#         continue  
+#     is_prime = True
+#     for i in range(3, int(math.sqrt(num)) + 1, 2):
+#         if num % i == 0:
+#             is_prime = False
+#             break
+#     if is_prime:
+#         l1+=1
+# print(l1)
+
+
+# n = int(input())
+# for i in range(1,(n*2)+1):
+#     if (i % n == 0) and (i%2 == 0):
+#         print(i)
+#         break
+
+# a = int(input())
+# b = int(input())
+# s1 = set()
+# for i in range(1,a+1):
+#     if a%i == 0:
+#         s1.add(i)
+# s2 = set()
+# for i in range(1,b+1):
+#     if b%i == 0:
+#         s2.add(i)
+# s3 = s1.intersection(s2)
+# print(len(s3))
+
+    # if n % 2 == 0:
+    #     return False  
+    # is_prime = True
+    # for i in range(3, int(math.sqrt(n)) + 1, 2):
+    #     if n % i == 0:
+    #         is_prime = False
+    #         break
+    # return is_prime
+
+# def palig(n):
+#     n_str = str(n)
+#     reverse_n = n_str[::-1]
+#     if n_str == reverse_n:
+#         return True
+#     else:
+#         return False
+# def prime(n):
+#     if n <= 1:
+#         return False 
+#     elif n == 2:
+#         return True
+#     else:
+#         p = [0] * (n + 1)
+#         for i in range(2, n + 1):
+#             if p[i] == 0:
+#                 for j in range(i*i, n+1, i):
+#                     p[j] = 1
+#         return p[n] == 0
+# n = int(input())
+# i = n
+# while True:
+#     a = palig(i)
+#     b = prime(i)
+#     if a == True and b == True:
+#         print(i)
+#         break
+#     else:
+#         i += 1
+
+# customers = [1,0,1,2,1,1,7,5]
+# grumpy = [0,1,0,1,0,1,0,1]
+# minutes = 3
+# d = list(zip(grumpy,customers))
+# initial = []
+# for x,y in d:
+#     if x == 0:
+#         initial.append(y)
+# print(initial)
+# def sliding_window(initial,minutes):
+#     minutes = minutes-1
+#     total = sum(initial[:minutes])
+#     maxtotal = total
+#     for i in range(len(initial)-minutes):
+#         total -= initial[i]
+#         total += initial[i+minutes]
+#         maxtotal = max(maxtotal,total)
+#     return maxtotal
+
+# final = sliding_window(customers,minutes)
+# print(final)
+
+
+# nums = list(map(int, input().split()))
+# a = max(nums)
+# b = min(nums)
+# while(b!=0):
+#     temp = b
+#     b = a%b
+#     a = temp
+# print(a)
+
+# nums = [1,1,1,1,1]
+# k = 1
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i,len(nums)):
+#         l.append(nums[i:j+1])
+# print(l)
+# subarray = []
+# for i in l:
+#     sub = []
+#     for j in i:
+#         if j%2 != 0:
+#             sub.append(True)
+#     subarray.append(len(sub))
+# increment = 0
+# for i in subarray:
+#     if i == k:
+#         increment +=1
+# print(increment)
+
+# def gcd(t):
+#     a = max(t)
+#     b = min(t)
+#     while(b!=0):
+#         temp = b
+#         b = a%b
+#         a = temp
+#     return a
+# nums = [1,2,3,4,5,6]
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         l.append((nums[i],nums[j]))
+# l1 = []
+# for i in range(len(l)):
+#     for j in range(i+1,len(l)):
+#         g = gcd(l[i]) + gcd(l[j])
+#         l1.append(g)
+# # for i in range(1,int(len(nums)/2)+1):
+
+# print(l1)

@@ -766,7 +766,289 @@ from itertools import*
 # l = l1[0]+l1[1]
 # print(sorted(l))
 
+# s = input()
+# counts = 1
+# for i in s:
+#     if i == i.upper():
+#         counts += 1
+# print(counts)
 
+# s = input()
+# n = int(input())
+# l = []
+# for i in range(n):
+#     l.append(s)
+# new = "".join(l)
+# new2 = new[:n:]
+# result = new2.count('a')
+# print(result)
+
+
+# def icecreamParlor(m, arr):
+#     l = []
+#     for i in range(len(arr)):
+#         for j in range(i+1, len(arr)):
+#             if arr[i] + arr[j] == m:
+#                 l.append(i+1)
+#                 l.append(j+1)
+#     return l
+# m = int(input())
+# arr = [2, 2,4, 3]
+# res = icecreamParlor(m,arr)
+# print(res)
+
+
+
+# arr = [1,2,1,2,1]
+# k = 2
+# arr.sort()
+# l = set()
+# for i in range(len(arr)):
+#     a = arr[0:k:1]
+#     maxi = max(a)-min(a)
+#     l.add(maxi)
+#     b = arr[::-1]
+#     c = b[0:k:1]
+#     mini = max(c) - min(c)
+#     l.add(mini)
+# result = min(l)
+# print(result)
+
+
+# arr1 = [2,3,1,3,2,4,6,7,9,2,19]
+# arr2 = [2,1,4,3,9,6]
+# d = {}
+# for i in arr2:
+#     a = arr1.count(i)
+#     d[i] = a
+# l = []
+# for x,y in d.items():
+#     for j in range(y):
+#         l.append(x)
+# l1 = []
+# for k in arr1:
+#     if k not in l:
+#         l1.append(k)
+# l1.sort()
+# l3 = l + l1
+# print(l3)
+
+# s = input()
+# t = input()
+# counts = 0
+# for i in s:
+#     if i in t:
+#         counts += 1
+# if counts == len(s):
+#     print(True)
+# else:
+#     print(False)
+
+
+# nums = [1,4,4]
+# target = 4
+# sub_array = []
+# for i in range(len(nums)):
+#     for j in range(i,len(nums)):
+#         sub_array.append(nums[i:j+1])
+# l = []
+# for j in sub_array:
+#     if sum(j) >= target:
+#         l.append(len(j))
+# if not l:
+#     print(0)
+# else:
+#     result = min(l)
+#     print(result)
+
+
+# n = int(input())
+# n1=n
+# l = []
+# while n > 0:
+#     l.insert(0,n%10)
+#     n //= 10
+# counts = 0
+# for i in l:
+#     if i == 0:
+#         continue
+#     else:
+#         if n1 % i == 0:
+#             counts += 1
+# print(counts)
+
+# s = input()
+# t = input()
+# l = []
+# for i in range(len(t)):
+#     for j in range(i+1,len(t)):
+#         l.append(t[i:j+1])
+# print(l)
+# if s in l:
+#     print(True)
+# else:
+#     print(False)   
+
+
+# def generate_subsequences(s):
+#     subsequences = []
+#     n = len(s)
+    
+#     # There are 2^n possible subsequences
+#     for i in range(1, 1 << n):
+#         subsequence = ""
+#         for j in range(n):
+#             # Check if the j-th bit in the i is set
+#             if (i & (1 << j)) != 0:
+#                 subsequence += s[j]
+#         subsequences.append(subsequence)
+    
+#     return subsequences
+
+# # Example usage:
+# s = "ahbgdc"
+# print(generate_subsequences(s))
+
+
+# s = input()
+# t = input()
+# subarray = []
+# n = len(t)
+# for i in range(1,1 << n):
+#     sub = ""
+#     for j in range(n):
+#         if i & (1 << j) != 0:
+#             sub += t[j]
+#     subarray.append(sub)
+# subarray.append("")
+# if s in subarray:
+#     print(True)
+# else:
+#     print(False)
+
+# nums = [1,1,1,1,1,1,1,1]
+# target = 11
+# l = []
+# for i in range(len(nums)-1):
+#     if nums[i] + nums[i+1] == target:
+#         l.append(nums[i])
+#         l.append(nums[i+1])
+#     elif nums[i] == target:
+#         l.append(nums[i])
+# print(len(l))
+
+# height = [1,1]
+# set_height = set(height)
+# if len(set_height) < 2:
+#     h = set_height.pop()
+#     print(h)
+# else:
+#     l = sorted(list(set_height),reverse=True)
+#     lst = []
+#     h = l[0]
+#     h1 = l[1]
+#     lst.append(height.index(h))
+#     lst.append(height.index(h1))
+#     w = abs(lst[0] - lst[1])
+#     area = h1 * w
+#     print(area)
+
+
+# print(set_height)
+# h1_sort = sorted(height)
+# h = h1_sort[-2]
+# # print(h)
+# lst2 = h1_sort[-1],h1_sort[-2]
+# print(lst2)
+# l = []
+# for index, i in enumerate(lst2):
+#     l.append(index)  
+# print(l)
+# w = abs(l[0] - l[1])
+# print(w)
+# area = h * w
+# print(area)
+
+# numbers = [2,3,4]
+# target = 6
+# l = []
+# for i in range(len(numbers)):
+#     for j in range(i+1,len(numbers)):
+#         if numbers[i]+numbers[j] == target:
+#             l.append(i+1)
+#             l.append(j+1)
+# print(l)
+# numbers = [1,2,3,4,4,6,7,8,9,10]
+# target = 15
+# i,j = 0,len(numbers)-1
+# l = []
+# while i<j:
+#     if numbers[i] + numbers[j] == target:
+#         l.append(i+1)
+#         l.append(j+1)
+#         break
+#     elif numbers[i] + numbers[j] < target:
+#         i+=1
+#     else:
+#         j -= 1
+# print(l)
+
+# nums = [4,5,0,-2,-3,1]
+# k = int(input())
+# subarray = []
+# n = len(nums)
+# for i in range(1,1<<n):
+#     sub = []
+#     for j in range(n):
+#         if i & (1 << j) != 0:
+#             sub.append(nums[j])
+#     subarray.append(sub)
+# print(subarray)
+# # l = []
+# for j in subarray:
+#     print(j)
+#     if j % k == 0:
+#         l.append(j)
+# print(l)
+
+
+# nums = [23,2,6,4,7]
+# k = 6
+# l = []
+# for i in range(len(nums)-1):
+#     if (nums[i] + nums[i + 1]) % k == 0:
+#         l.append(nums[i])
+#         l.append(nums[i + 1])
+# print(l)
+
+# s = input()
+# s1 = "hackerrank"
+# counts = 0
+# for i in s1:
+#     if i in s:
+#         counts += 1
+# if counts == len(s1):
+#     print("YES")
+# else:
+#     print("NO")
+
+
+
+# def silding_window(s,p):
+#     check = []
+#     maximum = s[:len(p)]
+#     total = maximum
+#     vowels = ['a','e','i','o','u']
+#     for i in range(len(s)-p):
+#         for j in vowels:
+#             if j in maximum:
+#                 check.append(j)
+#         total -=i
+#         total += i+p
+#     return check
+# s = "bacacbefaobeacfe"
+# k = 5
+# print(silding_window(s,k))
 
 
 

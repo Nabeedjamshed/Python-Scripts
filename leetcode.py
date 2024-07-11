@@ -3039,3 +3039,507 @@ import math as m
 # # for i in range(1,int(len(nums)/2)+1):
 
 # print(l1)
+
+# def gcd(a,b):
+#     while(b!=0):
+#         temp = b
+#         b = a%b
+#         a = temp
+#     return a
+# n = int(input())
+# l = []
+# for d in range(2,n+1):
+#     for n in range(1,d):
+#         if gcd(n,d) == 1:
+#             l.append(f"{n}/{d}")
+# print(l)
+
+# nums = list(map(int, input().split()))
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         if nums[i] < nums[j]:
+#             l.append(abs(nums[i] - nums[j]))
+# if not l:
+#     print(-1)
+# else:
+#     print(max(l))
+
+# operations = ["--X","X++","X++"]
+# X = 0
+# for i in operations:
+#     if i == "--X" or "X--":
+#         X -= 1
+#     elif i == "++X" or "X++":
+#         X += 1
+#     return X
+
+# def gcd(num):
+#     a = max(num)
+#     b = min(num)
+#     while(b!=0) and gcd(num) != 1:
+#         temp = b
+#         b = a%b
+#         a = temp
+#     return a
+# inc = 0
+# rectangles = [[4,8],[3,6],[10,20],[15,30]]
+# for i in range(len(rectangles)):
+#     for j in range(i+1,len(rectangles)):
+#         print(gcd(rectangles[i]),end=" ")
+#         print(gcd(rectangles[j]))
+#         if gcd(rectangles[i]) == gcd(rectangles[j]):
+#             inc += 1
+# print(inc)
+
+# nums = ["0","0"]
+# k = 2
+# l = []
+# for i in nums:
+#     l.append(int(i))
+# l.sort()
+# result = l[-k]
+# print(result)
+
+# nums = list(map(int,input().split()))
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         l.append(abs(nums[i] - nums[j]))
+# if not l:
+#     print(0)
+# else:
+#     print(min(l))
+# ranges = [[1,10],[10,20]]
+# left = 21
+# right = 21
+# l = []
+# for i in range(left,right+1):
+#     l.append(i)
+# check = 0
+# for j in range(len(ranges)):
+#     for i in l:
+#         if i in ranges[j]:
+#             check+=1
+# if check == len(l):
+#     print(True)
+# else:
+#     print(False)
+
+
+
+# n = int(input())
+# l = []
+# for i in range(1,n+1):
+#     if n%i == 0:
+#         l.append(i)
+# if len(l) == 3:
+#     print(True)
+# else:
+#     print(False)
+
+# n = int(input())
+# k = int(input())
+# l = []
+# for i in range(1,n+1):
+#     if n%i == 0:
+#         l.append(i)
+# if k <= len(l):
+#     print(l[k-1])
+# else:
+#     print(-1)
+
+# n = int(input())
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# l = []
+# for i in range(1,a*c):
+#     if i%a == 0 or i%b == 0 or i%c == 0:
+#         l.append(i)
+# fac = l[n-1]
+# print(fac)
+
+
+# nums = [8,2,4,7]
+# limit = 4
+# l = []
+# for i in range(len(nums)):
+#     for j in range(i,len(nums)):
+#         l.append(nums[i:j+1])
+# l1 = []
+# for j in range(len(l)):
+#     if len(l[j]) < 2:
+#         l1.append(0)
+#     else:
+#         maxi = 0
+#         for i in range(i+1,len(l)):
+#             if (abs(l[j] - l[i])) > maxi:
+#                 maxi = (abs(l[j] - l[i]))
+#         l1.append(maxi)
+# print(l1)
+
+# s = input()
+# t = input()
+# l = 0
+# for i in s:
+#     initial = s.index(i)
+#     final = t.index(i)
+#     l += abs(initial-final)
+# return l
+
+# s = input()
+# l = set()
+# for i in range(len(s)):
+#     for j in range(i,len(s)):
+#         l.add(s[i:j+1])
+# l1 = []
+# for k in l:
+#     k1 = k[::-1]
+#     if k == k1:
+#         l1.append(k)
+
+# print(l1[0])
+
+
+# b1 = "()"
+# b2 = "[]"
+# b3 = "{}"
+# s = input()
+# if b1 in s or b2 in s or b3 in s:
+#     print(True)
+# else:
+#     print(False)
+
+
+# nums = [-1,1,-1,1,-1]
+# mult = 1
+# for i in range(len(nums)):
+#     mult *= nums[i]
+# if mult > 0:
+#     print(1)
+# elif mult < 0:
+#     print(-1)
+# else:
+#     print(0)
+
+# nums = [100,10,1]
+# sub = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         sub.append(nums[i:j+1])
+# sorted_sub = []
+# for k in sub:
+#     s = sorted(k)
+#     sorted_sub.append(s)
+# l = []
+# for x in sorted_sub:
+#     if x in sub:
+#         # if sum(x) > l:
+#         #     l = sum(x)
+#         l.append(x)
+# print(sub)
+# print(sorted_sub)
+# print(l)
+
+
+# nums = [3,4,5,2]
+# l = 0
+# for i in range(len(nums)):
+#     for j in range(len(nums)):
+#         if i == j:
+#             continue
+#         else:
+#             if (nums[i]-1) * (nums[j]-1) > l:
+#                 l = (nums[i]-1) * (nums[j]-1)
+# print(l)
+
+# nums = [1,2,3,1,1,3]
+# l = []
+# for i in range(len(nums)):
+#     for j in range(len(nums)):
+#         if nums[i] == nums[j] and i < j:
+#             l.append(i)
+#             l.append(j)
+# print(len(l)//2)
+
+# arr = [1,2,2,3,3,3]
+# d = {}
+# for i in arr:
+#     a = arr.count(i)
+#     d[i] = a
+# l = []
+# for x,y in d.items():
+#     if x == y:
+#         l.append(y)
+#     else:
+#         l.append(-1)
+# print(max(l))
+
+# nums = [7,7,7,7]
+# sub = []
+# for i in range(len(nums)):
+#     counts = 0
+#     for j in range(len(nums)):
+#         if nums[i] >nums[j]:
+#             counts += 1
+#     sub.append(counts)
+# print(sub)
+
+# num = int(input())
+# counts = 0
+# for i in range(num):
+#     if num == 0:
+#         break
+#     else:
+#         if num%2 == 0:
+#             num = num//2
+#             counts += 1
+#         else:
+#             num = num-1
+#             counts += 1
+# print(counts)
+# while num > 0:
+#     if num%2 == 0:
+#         num = num//2
+#         counts += 1
+#     else:
+#         num = num-1
+#         counts += 1
+# print(counts)
+
+
+# n = int(input())
+# copy_n = n
+# str_n = str(n)
+# lenght = len(str_n)
+# l = []
+# for i in str_n:
+#     l.append(int(i))
+# add = 0
+# for j in l:
+#     add += pow(j,int(lenght))
+# if n == add:
+#     print("Armstrong")
+# else:
+#     print("Non armstrong")
+
+
+# edges = [[1,2],[5,1],[1,3],[1,4]]
+# l = []
+# for i in edges:
+#     for j in i:
+#         l.append(j)
+# d = {}
+# for i in l:
+#     a = l.count(i)
+#     d[i] = a
+# for x,y in d.items():
+#     if y == len(edges):
+#         print(x)
+#         break
+
+
+# tickets = [2,3,2]
+# k = 2
+# counts = 0
+# i = 0
+# while tickets[k] != 0:
+#     i = i-1
+#     counts+=1
+# print(counts)
+
+# s = list("a#c")
+# t = list("b")
+# l1 = []
+# for i in s:
+#     if i != "#":
+#         l1.append(i)
+#     else:
+#         if not l1:
+#             continue
+#         else:
+#             l1.pop()
+# l2 = []
+# for j in t:
+#     if j != "#":
+#         l2.append(j)
+#     else:
+#         if not l2:
+#             continue
+#         else:
+#             l2.pop()
+# if l1 == l2:
+#     print(True)
+# else:
+#     print(False)
+
+# nums = [1]
+# k = 1
+# d = {}
+# for i in nums:
+#     a = nums.count(i)
+#     d[i] = a
+# d1 = dict(sorted(d.items(), key=lambda item: item[1],reverse=True))
+# l = []
+# for x,y in d1.items():
+#     if len(l) == k:
+#         break
+#     else:
+#         l.append(x)
+# print(l)
+
+
+# arr = [1,2,3,10,4,2,3,5]
+# l = []
+# i = 0
+# while i<len(arr)-1:
+#     if arr[i+1] - arr[i] != 1:
+#         l.append(arr[i+1])
+#     i += 1
+# print(l)
+
+
+# l = []
+# num = int(input("enter the no"))
+# for i in range (num):
+#     n = int(input("enter the no of values "))
+#     if n == (n *n) % 4:
+#         l .append(n)
+# print(l)
+
+
+# l = []
+# num = int(input("enter the no"))
+# for i in range(num):
+#     n = int(input("enter the no of values "))
+#     if n % 4 == 0:
+#         l.append(n ** 2)
+# add = sum(l)
+# print("The sum is", add)
+
+
+
+# limit = 100
+# n = 0
+
+# while True:
+#     # Calculate the sum of the squares of the first n natural numbers
+#     sum_of_squares = n * (n + 1) * (2 * n + 1) // 6
+#     if sum_of_squares >= limit:
+#         break
+#     n += 1
+
+# # The largest n is the previous n before the sum exceeded the limit
+# largest_n = n - 1
+
+# print(f"The largest value of n such that the sum of the squares of the first n natural numbers is less than {limit} is {largest_n}.")
+
+
+# l = []
+# limit = 100
+# for x in range(1, limit):
+#     sum_of_squares = (x * (x + 1) * (2 * x + 1)) // 6
+#     if sum_of_squares >= limit:
+#         break
+#     l.append(sum_of_squares)
+# print("The largest value is ",len(l))
+
+
+# class Solution:
+#     def averageWaitingTime(self, customers: List[List[int]]) -> float:
+#         first = customers[0][0] + customers [0][1] 
+#         wait = first - customers[0][0]
+#         for i in range(1,len(customers)):
+#             if first >= customers[i][0]:
+#                 first += customers [i][1]              
+#             else:
+#                 first = customers[i][0] + customers[i][1]
+#             wait += first -  customers [i][0]
+#         return (wait/len(customers))
+        
+
+# import copy
+# n = 18
+# time = 38
+# new_n = 0
+# new_time = 0
+# l = []
+# while new_time != time+1:
+#     new_time += 1
+#     new_n += 1
+#     l.append(new_n)
+#     if new_n == n:
+#         break
+# print(l)
+# new_l = copy.deepcopy(l)
+# for i in range(1, ((time+1)-l[-1])+1):
+#     l.append(new_l[-(i+1)])
+# result = l[-1]
+# print(result)
+
+
+
+# nums = [5]
+# l = nums
+# while len(l) > 1:  
+#     temp = []  
+#     for i in range(len(l)-1):
+#         sum_val = l[i] + l[i+1]
+#         if sum_val < 10:
+#             temp.append(sum_val)
+#         else:
+#             a = str(sum_val)
+#             temp.append(int(a[1]))
+#     l = temp 
+# result = l[0]
+# print(result)
+
+# nums = [1,2,3,4,5]
+# d = {}
+# for i in nums:
+#     a = nums.count(i)
+#     d[i] = a
+# maxi = max(d.values())
+# add = 0
+
+# for x,y in d.items():
+#     if y == maxi:
+#         add += y
+# print(add)
+
+# nums1 = [1,2,3]
+# nums2 = [2,4]
+# # l = []
+# # for i in nums1:
+# #     if i in nums2:
+# #         l.append(i)
+# # print(min(l))
+
+# i,j = 0,0
+# l = []
+# while i < len(nums1):
+#     if nums1[i] == nums2[j]:
+#         l.append(nums1[i])
+#         i += 1
+#         j += 1
+#     else:
+#         i += 1
+# if not l:
+#     l.append(-1)
+# print(min(l))
+
+
+def mult(arr):
+    mul = 1
+    for i in arr:
+        mul *= i
+    return mul
+
+nums = [-1,1,0,-3,3]
+l = []
+for i in range(len(nums)):
+    num = nums[:i] + nums[i+1:]
+    a = mult(num)
+    l.append(a)
+print(l)
